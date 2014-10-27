@@ -1,0 +1,33 @@
+<h1 id="colourloader-a-jquery-pre-loader">colourLoader: a jQuery pre-loader</h1>
+<h2 id="what-is-it-">What is it?</h2>
+<p>colourLoader is a preloader - it cycles through either rainbow colours, random colours, or colours of your choice before all the assets on your page have loaded. Once everything has loaded, it disappears. </p>
+<h2 id="cool-how-do-i-use-it-">Cool! How do I use it?</h2>
+<p>Good question. To use colourLoader, you&#39;ll need: </p>
+<ul>
+<li><a href="http://code.jquery.com/jquery-2.1.1.min.js">the jQuery library</a></li>
+<li><a href="https://github.com/jquery/jquery-color/">the jQuery.color plugin</a></li>
+<li>the <a href="http://erikapierre.com/colourloader/colourloader-plugin.js">colourLoader plugin</a> plus <a href="http://erikapierre.com/colourloader/colourloader.css">CSS file</a> (also available as a <a href="http://erikapierre.com/colourloader/_colourloader.scss">SCSS partial</a></li>
+</ul>
+<p>Make sure that the script files are all loaded in the head of your html in the order listed above, with your JS file coming last, and ensure that the colourLoader css file precedes your own.</p>
+<p>After that, you&#39;ll need to include the below code in your html, <strong>right after your <code>&lt;body&gt;</code>tag</strong>:</p>
+<pre><code>&lt;div class=&quot;loader&quot;&gt;&lt;/div&gt;
+</code></pre><p>Then, you&#39;ll need the below code included in your JavaScript file, inside your <code>$(document).ready()</code>:</p>
+<pre><code>$(document).ready(function() {
+    $(&#39;body&#39;).colourLoader(&quot;&lt;insertcolourshere&gt;&quot;);
+    //fade out when page is done loading
+    $(window).load(function() {
+        $(&#39;.loader&#39;).fadeOut(300).css(&#39;display&#39;, &#39;none&#39;).stop();
+    });
+})
+</code></pre><p>You&#39;ll need to replace <code>&lt;insertcolourshere&gt;</code> with either <code>&quot;rainbow&quot;</code>, <code>&quot;random&quot;</code>, or <code>&quot;myColours&quot;</code>. <strong>If you choose <code>&quot;myColours&quot;</code>, you&#39;ll also need to pass in an array of colours as an argument -- see below for an example.</strong></p>
+<h2 id="options">Options</h2>
+<p>colourLoader also offers a few other options that can be passed in as parameters:
+| Parameter    | Default | Options                                            |
+|--------------|---------|----------------------------------------------------|
+| myColourList | false   | An array of colours (name, hex, RGB(A), or HSL(A). |
+| opacity      | 1       | Any number between 0-1                             |<br>| Speed        | 300 ms  | Any number of milliseconds )higher# = slower).     |
+<em>Note</em>: myColourList is only available if you select &quot;myColours&quot; as your first argument. <em>Example: [&quot;red&quot;, &quot;#fff&quot;, &quot;rgb(124,210,25)&quot;]</em></p>
+<h2 id="examples">Examples</h2>
+<p><a href="http://erikapierre.com/colourloader/example-random.html">Random colours</a></p>
+<p><a href="http://erikapierre.com/colourloader/example-rainbow.html">Rainbow colours</a></p>
+<p><a href="http://erikapierre.com/colourloader/example-mycolours.html">My colours</a></p>
