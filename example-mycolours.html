@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/preloader.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<title>jQuery background fade</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jquery.color.plus-names-2.1.2.js"></script>
+	<script src="js/colourLoader-plugin.js"></script>
+	<script src="js/script-mycolours.js"></script>
+</head>
+<body>
+	<div class="loader">
+		<div class="loader-content">
+			<h1>
+				jQuery background fader
+			</h1>
+			<h2>
+				my header
+			</h2>
+		</div>
+	</div>
+	<div class="wrapper">
+		<h1><a href="index.html">jQuery colourLoader plugin</a></h1>
+		<p>A simple demonstration of the jQuery colourLoader plugin - random colours.</p>
+		<p>View the <a href="example-rainbow.html">rainbow colours</a> or <a href="example-random.html">random colours</a> options.</p>
+		<p>Sample code:</p>
+		<div class="code-sample">
+			<code>
+				<pre>
+$(document).ready(function() {
+	//initialize colourLoader
+	$('body').colourLoader("myColours", {
+		myColourList: ["#261745", "#A88E38", "#81A5D5", "#79D27B", "#A437A3", "#bae"]
+	});
+	//fade out when page is done loading
+	$(window).load(function() {
+		$('.loader').fadeOut(300).css('display', 'none').stop();
+	});
+})
+				</pre>
+			</code>
+		</div>
+		<img src="http://www.lorempixel.com/abstract/800/800" alt="">
+		<img src="http://www.lorempixel.com/business/800/800" alt="">
+		<img src="http://www.lorempixel.com/transport/800/800" alt="">
+		<img src="http://www.lorempixel.com/city/800/800" alt="">
+		<img src="http://www.lorempixel.com/fashion/800/800" alt="">
+		<img src="http://www.lorempixel.com/nature/800/800" alt="">
+		<img src="http://www.lorempixel.com/food/800/800" alt="">
+		<img src="http://www.lorempixel.com/cats/800/800" alt="">
+		<img src="http://www.placekitten.com/g/800/800" alt="">
+		<img src="http://www.placecage.com/800/800" alt="">
+		<img src="http://www.placecage.com/g/800/800" alt="">
+		<img src="http://www.placecage.com/c/800/800" alt="">
+		<img src="http://www.placecage.com/gif/800/800" alt="">
+	</div>
+</body>
+</html>

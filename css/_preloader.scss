@@ -1,0 +1,16 @@
+// ** COLOURLOADER CSS ** //
+
+//set height of HTML & body elements to 100% so the loader can stretch to their size
+ html, body {
+ 	height: 100%;
+ 	position: relative;
+ }
+
+//style the loader
+ .loader {
+ 	height: 100%;
+ 	width: 100%;
+ 	position: relative;
+ 	z-index: 9999;
+ }
+
