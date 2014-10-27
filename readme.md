@@ -31,11 +31,11 @@ You'll need to replace `<insertcolourshere>` with either `"rainbow"`, `"random"`
 
 ##Options
 colourLoader also offers a few other options that can be passed in as parameters:
-| Parameter    | Default | Options                                            |
-|--------------|---------|----------------------------------------------------|
-| myColourList | false   | An array of colours (name, hex, RGB(A), or HSL(A). |
-| opacity      | 1       | Any number between 0-1                             |	
-| Speed        | 300 ms  | Any number of milliseconds )higher# = slower).     |
+| Parameter    | Default | Options                                                         |   |   |
+|--------------|---------|-----------------------------------------------------------------|---|---|
+| myColourList | false   | An array of colours (name, hex, RGB(A), or HSL(A).              |   |   |
+| opacity      | 1       | Any number between 0-1 (0 is transparent and 1 is fully opaque) |   |   |
+| speed        | 300     | Number of milliseconds (higher# = slower).                      |   |   |
 *Note*: myColourList is only available if you select "myColours" as your first argument. *Example: ["red", "#fff", "rgb(124,210,25)"]*
 
 ## Examples
