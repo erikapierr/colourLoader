@@ -1,11 +1,19 @@
 (function($){
 	$.fn.colourLoader = function(colourScheme, options) {
-		
 		settings = $.extend({
 			opacity: 1,
 			speed: 300,
 			myColourList: []
 		}, options);
+
+		//show and hide <body> overflow when the colourLoader is run; make the loader fade out
+		showAndHide = function () {
+			$('body').css('overflow', 'hidden');
+			$(window).load(function() {
+				$('.loader').fadeOut(300).css('display', 'none').stop(true, false);
+				$('body').css('overflow', 'auto');
+			});
+		}
 
 		//variables for rainbow colour scheme
 		saturation = 50;
@@ -37,11 +45,11 @@
 			}, settings.speed, function() {
 				animateRandomLoader();
 			});
+			showAndHide();
 		}
 
 		//rainbow background function
 		animateRainbowLoader = function() {
-			console.log(rainbowArray.length);
 			for (var i=0;i<rainbowArray.length;i++){
 				$('.loader').animate({
 					backgroundColor: rainbowArray[i]
@@ -49,6 +57,7 @@
 					animateRainbowLoader();
 				});
 			}
+			showAndHide();
 		}
 
 		//choose your own colours
@@ -61,6 +70,7 @@
 					animateMyColours();
 					});
 				}
+				showAndHide();
 			}		
 		//set colour scheme
 		if (colourScheme === "random") {

@@ -14,19 +14,37 @@
 </code></pre><p>Then, you&#39;ll need the below code included in your JavaScript file, inside your <code>$(document).ready()</code>:</p>
 <pre><code>$(document).ready(function() {
     $(&#39;body&#39;).colourLoader(&quot;&lt;insertcolourshere&gt;&quot;);
-    //fade out when page is done loading
-    $(window).load(function() {
-        $(&#39;.loader&#39;).fadeOut(300).css(&#39;display&#39;, &#39;none&#39;).stop();
-    });
-})
+});
 </code></pre><p>You&#39;ll need to replace <code>&lt;insertcolourshere&gt;</code> with either <code>&quot;rainbow&quot;</code>, <code>&quot;random&quot;</code>, or <code>&quot;myColours&quot;</code>. <strong>If you choose <code>&quot;myColours&quot;</code>, you&#39;ll also need to pass in an array of colours as an argument -- see below for an example.</strong></p>
 <h2 id="options">Options</h2>
-<p>colourLoader also offers a few other options that can be passed in as parameters:
-| Parameter    | Default | Options                                            |
-|--------------|---------|----------------------------------------------------|
-| myColourList | false   | An array of colours (name, hex, RGB(A), or HSL(A). |
-| opacity      | 1       | Any number between 0-1                             |<br>| Speed        | 300 ms  | Any number of milliseconds )higher# = slower).     |
-<em>Note</em>: myColourList is only available if you select &quot;myColours&quot; as your first argument. <em>Example: [&quot;red&quot;, &quot;#fff&quot;, &quot;rgb(124,210,25)&quot;]</em></p>
+<p>colourLoader also offers a few other options that can be passed in as parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>myColourList</td>
+<td>false</td>
+<td>An array of colours (name, hex, RGB(A), or HSL(A).</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>1</td>
+<td>Any number between 0-1 (0 is transparent and 1 is fully opaque)</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>300</td>
+<td>Number of milliseconds (higher# = slower).</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note</em>: myColourList is only available if you select &quot;myColours&quot; as your first argument. <em>Example: [&quot;red&quot;, &quot;#fff&quot;, &quot;rgb(124,210,25)&quot;]</em></p>
 <h2 id="examples">Examples</h2>
 <p><a href="http://erikapierre.com/colourloader/example-random.html">Random colours</a></p>
 <p><a href="http://erikapierre.com/colourloader/example-rainbow.html">Rainbow colours</a></p>

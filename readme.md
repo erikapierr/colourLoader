@@ -20,11 +20,7 @@ Then, you'll need the below code included in your JavaScript file, inside your `
 ```
 $(document).ready(function() {
 	$('body').colourLoader("<insertcolourshere>");
-	//fade out when page is done loading
-	$(window).load(function() {
-		$('.loader').fadeOut(300).css('display', 'none').stop();
-	});
-})
+});
 ```
 
 You'll need to replace `<insertcolourshere>` with either `"rainbow"`, `"random"`, or `"myColours"`. **If you choose `"myColours"`, you'll also need to pass in an array of colours as an argument -- see below for an example.**
